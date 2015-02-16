@@ -22,14 +22,14 @@ $(document).ready(function(){
 	}, {
 		offset : 60
 	});
-	
+
 	$('#header').after('<video id="video-loops" width="1280" height="720" autoplay="" loop="">' +
-			'<source data-format="mp4" type="video/mp4" src="assets/videos/teektak_bg.mp4">' +
-//			'<source data-format="ogv" type="video/ogg" src="assets/videos/teektak_bg.ogv">' +
+			'<source data-format="mp4" type="video/mp4" src="static/teektak_bg.mp4">' +
+//			'<source data-format="ogv" type="video/ogg" src="static/teektak_bg.ogv">' +
 		'</video>');
-	
+
 	setVideoRatio();
-    
+
     $(window).resize(function() {
     	setVideoRatio();
 	});
@@ -37,11 +37,11 @@ $(document).ready(function(){
     function setVideoRatio() {
 		if(!isMobile()) {
 			$('#video-loops').show();
-		} else { 
+		} else {
 			$('#video-loops').hide();
 		}
     }
-	
+
 	$('.emailInputButton').on('click', function() {
 		ga('send', 'event', 'button', 'click', 'subscribe early access');
 	});
