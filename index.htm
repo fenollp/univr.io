@@ -43,19 +43,18 @@
 
       <video id="bgv" width="1280" height="720" autoplay loop muted>
         <source data-format="mp4" type="video/mp4" src="static/bg_video.mp4"/>
-        <>
       </video>
       <div id="tagLine">
 	<h1>UNIVERSAL VIRTUAL REALITY</h1>
 	<h2>no gadget needed</h2>
         <button id="frontButton">Download</button>
 	<div class="wistia">
-          <!-- <a href="http://fast.wistia.net/embed/iframe/ybhbl2ex23?popover=true" class="wistia-popover[height=388,playerColor=45b4aa,width=640]"> -->
-          PLAY DEMO VIDEO
-          <!-- ▸ -->
-          <!-- ▶ -->
-          ▷
-          <!-- </a> -->
+          <span class="pop-demo" data-video-id="bgWenRl7Xq0">
+            PLAY DEMO VIDEO
+            <!-- ▸ -->
+            <!-- ▶ -->
+            ▷
+          </span>
         </div>
       </div>
 
@@ -63,24 +62,44 @@
 
     <script src="static/jquery-1.11.1.min.js"></script>
     <script src="static/bootstrap-3.2.0.min.js"></script>
-    <!-- <script charset="ISO-8859-1" src="static/popover-v1.js"></script> -->
+    <script src="static/jquery-video-lightning-2.0.0.min.js"></script>
 
     <script type="text/javascript">
     $(document).ready(function (){
       var bgv = $('#bgv')[0];
-      var toggleVideo = function () {
+      var maybeSwitchBG = function () {
           var thres_w = 740;
           ($(window).width() < thres_w) ? $(bgv).hide()
                                         : $(bgv).show();
       }
-      toggleVideo();
-      $(window).resize(toggleVideo);
+      maybeSwitchBG();
+      $(window).resize(maybeSwitchBG);
+
       $(document).keydown(function (evt) {
           if (evt.keyCode == 32) {
               bgv.paused ? bgv.play() : bgv.pause();
-              bgv.paused ? $(bgv).hide() : $(bgv).show();
+              //bgv.paused ? $(bgv).hide() : $(bgv).show();
+              maybeSwitchBG();
           }
       });
+
+      $('.pop-demo').jqueryVideoLightning({
+modestbranding: 1,
+related: 0,
+showinfo: 0,
+theme: 'dark',
+byline: 0,
+glow: 0,
+backdrop_color: '#000',
+backdrop_opacity: 0.6,
+<!-- cover: 1, -->
+ease_in: 0,
+ease_out: 0,
+loop: 1,
+
+          autoplay: 1
+      });
+
     });
     </script>
 
