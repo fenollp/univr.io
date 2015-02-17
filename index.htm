@@ -33,7 +33,7 @@
 	  <a href="#" id="site-logo"></a>
 	  <nav role="navigation">
 	    <ul>
-	      <li><a href="#overview">Tour</a></li>
+	      <li><a href="#downloads">Downloads</a></li>
 	      <li><a href="#features">Features</a></li>
 	      <li><a href="#team">Team</a></li>
 	    </ul>
@@ -42,7 +42,7 @@
       </header>
 
       <video id="bgv" width="1280" height="720" autoplay loop muted>
-        <source data-format="mp4" type="video/mp4" src="static/ideo_bg.mp4"/>
+        <source data-format="mp4" type="video/mp4" src="static/bg_video.mp4"/>
         <>
       </video>
       <div id="tagLine">
@@ -64,22 +64,19 @@
 
     <script type="text/javascript">
     $(document).ready(function (){
-      function isMobile () {
+      var bgv = $('#bgv')[0];
+      var toggleVideo = function () {
           var thres_w = 740;
-          return $(window).width() < thres_w;
+          ($(window).width() < thres_w) ? $(bgv).hide()
+                                        : $(bgv).show();
       }
-      var bgv = $('#bgv');
-      setVideoRatio();
-      $(window).resize(setVideoRatio);
-      function setVideoRatio () {
-          isMobile() ? bgv.hide()
-                     : bgv.show();
-      }
-
+      toggleVideo();
+      $(window).resize(toggleVideo);
       $(document).keydown(function (evt) {
-          if (evt.keyCode == 32)
-              // bgv.paused ? bgv.play() : bgv.pause();
-              bgv.toggle();
+          if (evt.keyCode == 32) {
+              bgv.paused ? bgv.play() : bgv.pause();
+              bgv.paused ? $(bgv).hide() : $(bgv).show();
+          }
       });
     });
     </script>
