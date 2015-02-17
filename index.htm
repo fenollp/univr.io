@@ -41,8 +41,9 @@
 	</div>
       </header>
 
-      <video id="video-loops" width="1280" height="720" autoplay loop muted>
-        <source data-format="mp4" type="video/mp4" src="static/video_bg.mp4"/>
+      <video id="bgv" width="1280" height="720" autoplay loop muted>
+        <source data-format="mp4" type="video/mp4" src="static/ideo_bg.mp4"/>
+        <>
       </video>
       <div id="tagLine">
 	<h1>UNIVERSAL VIRTUAL REALITY</h1>
@@ -67,12 +68,19 @@
           var thres_w = 740;
           return $(window).width() < thres_w;
       }
+      var bgv = $('#bgv');
       setVideoRatio();
       $(window).resize(setVideoRatio);
-      function setVideoRatio() {
-          isMobile() ? $('#video-loops').hide()
-                     : $('#video-loops').show();
+      function setVideoRatio () {
+          isMobile() ? bgv.hide()
+                     : bgv.show();
       }
+
+      $(document).keydown(function (evt) {
+          if (evt.keyCode == 32)
+              // bgv.paused ? bgv.play() : bgv.pause();
+              bgv.toggle();
+      });
     });
     </script>
 
