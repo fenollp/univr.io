@@ -6,30 +6,29 @@
     <!-- To ensure proper rendering and touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no, minimal-ui"/>
 
-    <meta property="og:title" content="TeekTak Inc"/>
+    <meta property="og:title" content="UniVR"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="static/logo_white.svg"/>
-    <meta property="og:description" content="TeekTak - Simple time tracking, made for creatives by creatives."/>
+    <meta property="og:image" content="static/logo.svg"/>
+    <meta property="og:description" content="UniVR - Universal Virtual Reality, No headgear"/>
 
-    <meta name="description" content="TeekTak - Simple time tracking, made for creatives by creatives."/>
+    <meta name="description" content="UniVR - Universal Virtual Reality, No headgear"/>
 
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="TeekTak Inc"/>
-    <meta name="twitter:description" content="TeekTak - Simple time tracking, made for creatives by creatives."/>
-    <meta name="twitter:image" content="static/logo_white.svg"/>
+    <meta name="twitter:title" content="UniVR"/>
+    <meta name="twitter:description" content="UniVR - Universal Virtual Reality, No headgear"/>
+    <meta name="twitter:image" content="static/logo.svg"/>
 
-    <title>TeekTak - Simple time tracking, made for creatives by creatives.</title>
+    <title>UniVR - Universal Virtual Reality, No headgear</title>
     <link rel="icon" href="static/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"/>
 
-    <link rel="stylesheet" href="static/css.css"/>
-    <link rel="stylesheet" href="static/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/bootstrap-3.2.0.min.css"/>
     <link rel="stylesheet" href="static/style.css"/>
 
   </head>
   <body>
     <div class="hero">
-      <header id="header" class="">
+      <header id="header">
 	<div class="nav_primary">
 	  <a href="#" id="site-logo"></a>
 	  <nav role="navigation">
@@ -42,11 +41,13 @@
 	</div>
       </header>
 
-      <video id="video-loops" width="1280" height="720" autoplay="" loop=""><source data-format="mp4" type="video/mp4" src="static/teektak_bg.mp4"/></video>
+      <video id="video-loops" width="1280" height="720" autoplay loop muted>
+        <source data-format="mp4" type="video/mp4" src="static/video_bg.mp4"/>
+      </video>
       <div id="tagLine">
-	<h1>SIMPLE TIME TRACKING</h1>
-	<h2>Made for creatives by creatives</h2>
-        <button id="frontButton" class="emailInputButton">Pre-Order Now</button>
+	<h1>UNIVERSAL VIRTUAL REALITY</h1>
+	<h2>no headgear needed</h2>
+        <button id="frontButton">Download</button>
 	<div class="wistia">
           <!-- <a href="http://fast.wistia.net/embed/iframe/ybhbl2ex23?popover=true" class="wistia-popover[height=388,playerColor=45b4aa,width=640]"> -->
             PLAY DEMO VIDEO
@@ -56,26 +57,8 @@
 
     </div>
 
-    <!-- <footer id="footer" class="container-fluid"> -->
-    <!--   <div class="row"><p>Help us spread the word</p></div> -->
-    <!--   <div class="row"> -->
-    <!--     <ul> -->
-    <!--       <li><a href="http://www.twitter.com/teektakapp" target="_blank" id="twitter" title=""><img alt="twitter" src="static/icon_twitter@2x.png" width="0" style="display: none !important;" height="0"></a></li> -->
-    <!--       <li><a href="http://goo.gl/YiaBNd" target="_blank" id="facebook" title=""><img alt="facebook" src="static/icon_facebook@2x.png" width="0" style="display: none !important;" height="0"></a></li> -->
-    <!--       <li><a href="https://www.linkedin.com/company/teektak" target="_blank" id="linkedin" title=""><img alt="linkedin" src="static/icon_linkedin@2x.png" title="" width="0" style="display: none !important;" height="0"></a></li> -->
-    <!--       <\!-- <li><span class='st_facebook_large' displayText='Facebook' st_url="http://sharethis.com" st_title="Sharing is great!" st_summary="TeekTak"></span></li> -\-> -->
-    <!--       <\!-- <li><span class='st_twitter_large' displayText='Tweet'></span></li> -\-> -->
-    <!--       <\!-- <li><span class='st_linkedin_large' displayText='LinkedIn'></span></li> -\-> -->
-    <!--       <\!-- <li><span class='st_googleplus_large' displayText='Google +'></span></li> -\-> -->
-    <!--       <\!-- <li><span class='st_pinterest_large' displayText='Pinterest'></span></li> -\-> -->
-    <!--     </ul> -->
-    <!--   </div> -->
-    <!--   <div class="row"><p class="copyright">TeekTak.com © 2015 All rights reserved.</p></div> -->
-    <!-- </footer> -->
-
-    <script src="static/jquery.min.js"></script>
-    <script src="static/bootstrap.min.js"></script>
-    <script type="text/javascript" src="static/retina.js"></script>
+    <script src="static/jquery-1.11.1.min.js"></script>
+    <script src="static/bootstrap-3.2.0.min.js"></script>
     <!-- <script charset="ISO-8859-1" src="static/popover-v1.js"></script> -->
 
     <script type="text/javascript">
@@ -84,23 +67,11 @@
           var thres_w = 740;
           return $(window).width() < thres_w;
       }
-
-      <!-- $('#header').after('<video id="video-loops" width="1280" height="720" autoplay="" loop="">' + -->
-      <!--                    '<source data-format="mp4" type="video/mp4" src="static/teektak_bg.mp4">' + -->
-      <!--                  //'<source data-format="ogv" type="video/ogg" src="static/teektak_bg.ogv">' + -->
-      <!--                    '</video>'); -->
-
       setVideoRatio();
-
-      $(window).resize(function() {
-          setVideoRatio();
-      });
-
+      $(window).resize(setVideoRatio);
       function setVideoRatio() {
-          if(!isMobile())
-              $('#video-loops').show();
-          else
-              $('#video-loops').hide();
+          isMobile() ? $('#video-loops').hide()
+                     : $('#video-loops').show();
       }
     });
     </script>

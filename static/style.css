@@ -1,3 +1,22 @@
+/* latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat-Regular'), url(http://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat-Bold'), url(http://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
 /* css reset */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd,
@@ -230,14 +249,14 @@ header {
     height: 40px;
     background-repeat: no-repeat;
     /* http://imulus.github.io/retinajs/ */
-    /* .at2x('logo_white', svg, 130px, 32px); */
-    background-image: url('logo_white.svg');
+    /* .at2x('logo', svg, 130px, 32px); */
+    background-image: url('logo.svg');
 }
 
 @media all and (max-width: 46.24em) {
-	.nav_primary {
-		display: none;
-	}
+    .nav_primary {
+	display: none;
+    }
 }
 
 /* Hero */
@@ -268,7 +287,7 @@ header {
     left: 50%;
         -ms-transform: translate(-50%, -50%); /* IE 9 */
     -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
-    transform: translate(-50%, -50%); /* Standard syntax */
+            transform: translate(-50%, -50%); /* Standard syntax */
     width: 80%;
 }
 
@@ -277,7 +296,7 @@ header {
     line-height: 3.0rem;
 }
 
-.emailInputText, .emailInputButton,  .btn-green {
+#frontButton {
     border: none;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 0.3em;
@@ -331,29 +350,6 @@ video {
     background-position: bottom center;
     -webkit-transition: 1s opacity;
     transition: 1s opacity;
-}
-
-/* Section - Footer */
-
-footer {
-    background-color: #35353f;
-    color: #fff;
-    padding-top: 4rem;
-    padding-bottom: 0.1rem;
-}
-
-#footer ul {
-    margin-bottom: 2.8rem;
-    margin-top: 2.0rem;
-}
-
-#footer li {
-    padding: .8rem;
-}
-
-.copyright {
-    color: #9d9fa3;
-    font-size: 1.2rem;
 }
 
 .icon-play {
