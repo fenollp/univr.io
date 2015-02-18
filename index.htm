@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <!-- Inspired from www.teektak.com -->
+<!-- Uses fancyBox from fancyApps -->
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <!-- To ensure proper rendering and touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no, minimal-ui"/>
 
     <meta property="og:title" content="UniVR"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="static/logo.svg"/>
     <meta property="og:description" content="UniVR - Universal Virtual Reality, No gear"/>
-
     <meta name="description" content="UniVR - Universal Virtual Reality, No gear"/>
-
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="UniVR"/>
     <meta name="twitter:description" content="UniVR - Universal Virtual Reality, No gear"/>
     <meta name="twitter:image" content="static/logo.svg"/>
-
     <title>UniVR - Universal Virtual Reality, No headgear</title>
+
     <link rel="icon" href="static/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"/>
 
@@ -30,12 +28,7 @@
 
     <link rel="stylesheet" href="static/bootstrap-3.2.0.min.css"/>
     <link rel="stylesheet" href="static/style.css"/>
-
     <link rel="stylesheet" type="text/css" href="static/jquery.fancybox-2.1.5.css" media="screen"/>
-    <style type="text/css">
-      .fancybox-custom .fancybox-skin { box-shadow: 0 0 50px #222; }
-      body { max-width: 700px; margin: 0 auto; }
-    </style>
 
   </head>
   <body>
@@ -62,22 +55,16 @@
 	<h2>no gadget needed</h2>
         <button id="frontButton">Download</button>
 	<div class="wistia">
-          <!-- <span class="pop-demo" data-video-id="bgWenRl7Xq0"> -->
-          <!-- <a class="youtube" href="https://www.youtube.com/watch?v=bgWenRl7Xq0"> -->
           <a class="fancybox-media" href="https://vimeo.com/119921554">
             <!-- ▸ -->
             <!-- ▶ -->
             ▷
             PLAY TEASER
           </a>
-          <!-- </span> -->
         </div>
       </div>
 
     </div>
-
-    <!-- <script src="static/jquery-ui-1.10.4.min.js"></script> -->
-    <!-- <script src="static/jquery.youtubepopup-2.3.js"></script> -->
 
     <script type="text/javascript">
     $(document).ready(function (){
@@ -98,60 +85,19 @@
           }
       });
 
-<!--       $('.pop-demo').jqueryVideoLightning({ -->
-<!-- modestbranding: 1, -->
-<!-- related: 0, -->
-<!-- showinfo: 0, -->
-<!-- theme: 'dark', -->
-<!-- byline: 0, -->
-<!-- glow: 0, -->
-<!-- backdrop_color: '#000', -->
-<!-- backdrop_opacity: 0.6, -->
-<!-- <\!-- cover: 1, -\-> -->
-<!-- ease_in: 0, -->
-<!-- ease_out: 0, -->
-<!-- loop: 1, -->
-
-<!--           autoplay: 1 -->
-<!--       }); -->
-
-
-<!-- $(function () { -->
-<!-- $('a.youtube').YouTubePopup({ -->
-<!-- autoplay:0 -->
-<!-- }); -->
-<!-- }); -->
-
-<!-- $(document).ready(function() { -->
-<!-- $('#vimeo').bind('click', function() { -->
-<!-- Fresco.show([ -->
-<!-- { -->
-<!-- url: 'http://vimeo.com/32071937', -->
-<!-- options: { -->
-<!-- thumbnail: '/images/default/index/thumbnails/vimeo.jpg' // custom thumbnail -->
-<!-- } -->
-<!-- }, -->
-<!-- 'http://vimeo.com/108057431' -->
-<!-- ]); -->
-<!-- }); -->
-<!-- }); -->
-
-
       $('.fancybox-media')
-      .attr('rel', 'media-gallery')
-      .fancybox({
-      openEffect : 'none',
-      closeEffect : 'none',
-      prevEffect : 'none',
-      nextEffect : 'none',
-      arrows : false,
-      helpers : {
-      media : {},
-      buttons : {}
-      }
-      });
-
-
+          .attr('rel', 'media-gallery')
+          .fancybox({
+              openEffect: 'none',
+              closeEffect: 'none',
+              prevEffect: 'none',
+              nextEffect: 'none',
+              arrows: false,
+              helpers: {
+                  media: {},
+                  buttons: {}
+              }
+          });
 
     });
     </script>
