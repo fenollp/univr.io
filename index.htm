@@ -22,8 +22,20 @@
     <link rel="icon" href="static/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"/>
 
+    <script type="text/javascript" src="static/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.2.0.min.js"></script>
+
+    <script type="text/javascript" src="static/jquery.fancybox-2.1.5.js"></script>
+    <script type="text/javascript" src="static/jquery.fancybox-media-1.0.6.js"></script>
+
     <link rel="stylesheet" href="static/bootstrap-3.2.0.min.css"/>
     <link rel="stylesheet" href="static/style.css"/>
+
+    <link rel="stylesheet" type="text/css" href="static/jquery.fancybox-2.1.5.css" media="screen"/>
+    <style type="text/css">
+      .fancybox-custom .fancybox-skin { box-shadow: 0 0 50px #222; }
+      body { max-width: 700px; margin: 0 auto; }
+    </style>
 
   </head>
   <body>
@@ -51,7 +63,8 @@
         <button id="frontButton">Download</button>
 	<div class="wistia">
           <!-- <span class="pop-demo" data-video-id="bgWenRl7Xq0"> -->
-          <a class="youtube" href="https://www.youtube.com/watch?v=bgWenRl7Xq0">
+          <!-- <a class="youtube" href="https://www.youtube.com/watch?v=bgWenRl7Xq0"> -->
+          <a class="fancybox-media" href="https://vimeo.com/119921554">
             <!-- ▸ -->
             <!-- ▶ -->
             ▷
@@ -63,8 +76,6 @@
 
     </div>
 
-    <script src="static/jquery-1.11.1.min.js"></script>
-    <script src="static/bootstrap-3.2.0.min.js"></script>
     <!-- <script src="static/jquery-ui-1.10.4.min.js"></script> -->
     <!-- <script src="static/jquery.youtubepopup-2.3.js"></script> -->
 
@@ -111,21 +122,34 @@
 <!-- }); -->
 <!-- }); -->
 
-$(document).ready(function() {
-$('#vimeo').bind('click', function() {
-Fresco.show([
-{
-url: 'http://vimeo.com/32071937',
-options: {
-thumbnail: '/images/default/index/thumbnails/vimeo.jpg' // custom thumbnail
-}
-},
-'http://vimeo.com/108057431'
-]);
-});
-});
+<!-- $(document).ready(function() { -->
+<!-- $('#vimeo').bind('click', function() { -->
+<!-- Fresco.show([ -->
+<!-- { -->
+<!-- url: 'http://vimeo.com/32071937', -->
+<!-- options: { -->
+<!-- thumbnail: '/images/default/index/thumbnails/vimeo.jpg' // custom thumbnail -->
+<!-- } -->
+<!-- }, -->
+<!-- 'http://vimeo.com/108057431' -->
+<!-- ]); -->
+<!-- }); -->
+<!-- }); -->
 
 
+      $('.fancybox-media')
+      .attr('rel', 'media-gallery')
+      .fancybox({
+      openEffect : 'none',
+      closeEffect : 'none',
+      prevEffect : 'none',
+      nextEffect : 'none',
+      arrows : false,
+      helpers : {
+      media : {},
+      buttons : {}
+      }
+      });
 
 
 
