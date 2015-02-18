@@ -28,10 +28,6 @@
     <link rel="stylesheet" type="text/css" href="static/style.css"/>
     <link rel="stylesheet" type="text/css" href="static/jquery.fancybox-2.1.5.css" media="screen"/>
 
-    <style type="text/css">
-      .fancybox-media { width:1280px; height:720px; }
-    </style>
-
   </head>
   <body>
     <div class="hero">
@@ -79,13 +75,20 @@
       maybeSwitchBG();
       $(window).resize(maybeSwitchBG);
 
+      var toggleBGPlay = function () {
+          bgv.paused ? bgv.play() : bgv.pause();
+          //bgv.paused ? $(bgv).hide() : $(bgv).show();
+          maybeSwitchBG();
+      };
       $(document).keydown(function (evt) {
-          if (evt.keyCode == 32) {
-              bgv.paused ? bgv.play() : bgv.pause();
-              //bgv.paused ? $(bgv).hide() : $(bgv).show();
-              maybeSwitchBG();
-          }
+          if (evt.keyCode == 32)
+              toggleBGPlay();
       });
+
+if ($('.fancybox-media').is(':visible'))
+  toggleBGPlay();
+
+
 
       $('.fancybox-media')
           .attr('rel', 'media-gallery')
