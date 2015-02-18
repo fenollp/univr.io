@@ -1,0 +1,46 @@
+
+/* Responsive */
+
+/* change menu once we go below 980 */
+@media only screen
+and (max-width : 980px) {
+  .demo-column-bottom {
+    border-bottom: 1px solid #000;
+    padding-bottom: 25px;
+  }
+  
+  #demonstrations h1 { display: none; }
+  
+  html body #page .demo-column.rightmost {
+    margin-right: 15px; 
+  }
+}
+
+/* page changes */
+/* ipad */
+@media only screen
+and (min-width : 680px)
+and (max-width : 980px) {
+  /* no border on bottom demos */
+  .demo-column-youtube,
+  .demo-column-vimeo {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* iphone */
+@media only screen
+and (max-width : 700px) { /* 680 + 10 + 10 */
+  .demo-column-last {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .demo-column img {
+    width: 300px;
+    height: 150px;
+    max-width: 100%;  
+  }
+}

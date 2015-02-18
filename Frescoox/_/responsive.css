@@ -1,0 +1,62 @@
+/* Responsive */
+
+/* change menu once we go below 980 */
+@media only screen
+and (max-width : 980px) {
+  #header { height: auto; }
+
+  #all_projects { display: none; }
+    
+  #menu { float: left; height: auto; clear: both; width: 100%; padding-top: 30px; }
+  #menu .menu-buttons { height: auto; }
+  #menu .item { margin-bottom: 6px; }
+
+	#footer .column_half { display: none; }
+	#footer .rightmost { display: block; }
+	
+	.columns .column,
+	.columns .column_half { margin-bottom: 19px; }
+
+	.dataForm dt { width: 25%; margin-right: 10px; }
+	.dataForm dd { width: 69%; }
+}
+
+/* page changes */
+/* ipad */
+@media only screen
+and (min-width : 680px)
+and (max-width : 980px) {
+  #page { 
+    width: 680px; /* 647 + 15 */
+  }
+  #page-wrapper {
+    width: 662px;
+    margin-left: 8px;
+  }
+  
+  #userbar {
+    width: 331px;
+  }
+}
+
+/* iphone */
+@media only screen
+and (max-width : 700px) { /* 680 + 10 + 10 */
+  #page { 
+    width: 320px; /* 316 + 4 */
+  }
+  #page-wrapper {
+    width: 300px;
+    margin-left: 10px;
+  }
+  
+  .columns .column {
+    width: 300px;
+    clear: both;
+    margin-right: 0;
+  }
+  
+  #userbar {
+    width: 150px;
+  }
+}
