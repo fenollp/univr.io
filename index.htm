@@ -22,12 +22,10 @@
 
     <script type="text/javascript" src="static/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="static/bootstrap-3.2.0.min.js"></script>
+    <script type="text/javascript" src="static/fancybox_media-2.1.5_1.0.6.js"></script>
 
-    <script type="text/javascript" src="static/jquery.fancybox-2.1.5.js"></script>
-    <script type="text/javascript" src="static/jquery.fancybox-media-1.0.6.js"></script>
-
-    <link rel="stylesheet" href="static/bootstrap-3.2.0.min.css"/>
-    <link rel="stylesheet" href="static/style.css"/>
+    <link rel="stylesheet" type="text/css" href="static/bootstrap-3.2.0.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/style.css"/>
     <link rel="stylesheet" type="text/css" href="static/jquery.fancybox-2.1.5.css" media="screen"/>
 
   </head>
@@ -94,8 +92,16 @@
               nextEffect: 'none',
               arrows: false,
               helpers: {
-                  media: {},
+                  media: true,
                   buttons: {}
+              },
+              vimeo: {
+                  autoplay      : 1,
+                  hd            : 1,
+                  show_title    : 0,
+                  show_byline   : 0,
+                  show_portrait : 0,
+                  fullscreen    : 1
               }
           });
 
