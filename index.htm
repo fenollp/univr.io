@@ -42,20 +42,22 @@
       </header>
 
       <video id="bgv" width="1280" height="640" autoplay loop muted poster="static/hero.jpg">
-        <source src="//giant.gfycat.com/CandidImmaterialDromedary.webm" type="video/webm"/>
-        <source src="//giant.gfycat.com/CandidImmaterialDromedary.mp4" type="video/mp4"/>
+        <source src="http://giant.gfycat.com/CandidImmaterialDromedary.webm" type="video/webm"/>
+        <source src="http://giant.gfycat.com/CandidImmaterialDromedary.mp4" type="video/mp4"/>
       </video>
       <div id="tagLine">
 	<h1>UNIVERSAL VIRTUAL REALITY</h1>
 	<h2>no gadget needed</h2>
         <button id="frontButton">Download</button>
 	<div class="wistia">
-          <span class="pop-demo" data-video-id="bgWenRl7Xq0">
-            PLAY DEMO VIDEO
+          <!-- <span class="pop-demo" data-video-id="bgWenRl7Xq0"> -->
+          <a class="youtube" href="https://www.youtube.com/watch?v=bgWenRl7Xq0">
             <!-- ▸ -->
             <!-- ▶ -->
             ▷
-          </span>
+            PLAY TEASER
+          </a>
+          <!-- </span> -->
         </div>
       </div>
 
@@ -63,7 +65,8 @@
 
     <script src="static/jquery-1.11.1.min.js"></script>
     <script src="static/bootstrap-3.2.0.min.js"></script>
-    <script src="static/jquery-video-lightning-2.0.0.min.js"></script>
+    <!-- <script src="static/jquery-ui-1.10.4.min.js"></script> -->
+    <!-- <script src="static/jquery.youtubepopup-2.3.js"></script> -->
 
     <script type="text/javascript">
     $(document).ready(function (){
@@ -84,22 +87,47 @@
           }
       });
 
-      $('.pop-demo').jqueryVideoLightning({
-modestbranding: 1,
-related: 0,
-showinfo: 0,
-theme: 'dark',
-byline: 0,
-glow: 0,
-backdrop_color: '#000',
-backdrop_opacity: 0.6,
-<!-- cover: 1, -->
-ease_in: 0,
-ease_out: 0,
-loop: 1,
+<!--       $('.pop-demo').jqueryVideoLightning({ -->
+<!-- modestbranding: 1, -->
+<!-- related: 0, -->
+<!-- showinfo: 0, -->
+<!-- theme: 'dark', -->
+<!-- byline: 0, -->
+<!-- glow: 0, -->
+<!-- backdrop_color: '#000', -->
+<!-- backdrop_opacity: 0.6, -->
+<!-- <\!-- cover: 1, -\-> -->
+<!-- ease_in: 0, -->
+<!-- ease_out: 0, -->
+<!-- loop: 1, -->
 
-          autoplay: 1
-      });
+<!--           autoplay: 1 -->
+<!--       }); -->
+
+
+<!-- $(function () { -->
+<!-- $('a.youtube').YouTubePopup({ -->
+<!-- autoplay:0 -->
+<!-- }); -->
+<!-- }); -->
+
+$(document).ready(function() {
+$('#vimeo').bind('click', function() {
+Fresco.show([
+{
+url: 'http://vimeo.com/32071937',
+options: {
+thumbnail: '/images/default/index/thumbnails/vimeo.jpg' // custom thumbnail
+}
+},
+'http://vimeo.com/108057431'
+]);
+});
+});
+
+
+
+
 
     });
     </script>
