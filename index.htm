@@ -85,11 +85,6 @@
               toggleBGPlay();
       });
 
-if ($('.fancybox-media').is(':visible'))
-  toggleBGPlay();
-
-
-
       $('.fancybox-media')
           .attr('rel', 'media-gallery')
           .fancybox({
@@ -109,8 +104,13 @@ if ($('.fancybox-media').is(':visible'))
                   show_byline   : 0,
                   show_portrait : 0,
                   fullscreen    : 1
-              }
-          });
+              },
+              overlay : {
+                               css : {
+                               'background' : 'rgba(255,255,255,0.5)'
+                               }
+                               }
+                               });
 
     });
     </script>
