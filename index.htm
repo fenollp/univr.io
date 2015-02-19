@@ -23,6 +23,7 @@
     <script type="text/javascript" src="static/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="static/bootstrap-3.2.0.min.js"></script>
     <script type="text/javascript" src="static/fancybox_media-2.1.5_1.0.6.js"></script>
+    <script type="text/javascript" src="http://morr.github.io/javascripts/jquery.appear.js"></script>
 
     <link rel="stylesheet" type="text/css" href="static/bootstrap-3.2.0.min.css"/>
     <link rel="stylesheet" type="text/css" href="static/style.css"/>
@@ -113,10 +114,19 @@
               },
               <!-- overlay : null, -->
               <!-- margin: [0, 0, 0, 0] -->
-
-
-
           });
+
+              $('.fancybox-skin').on('appear', function (event, allAppeared) {
+              console.log(event);
+              console.log(allAppeared);
+              });
+
+              $('.fancybox-skin').on('disappear', function (event, allDisappeared) {
+              console.log(event);
+              console.log(allDisappeared);
+              });
+
+              
 
     });
     </script>
