@@ -32,7 +32,9 @@
     <link rel="apple-itouch-icon" href="/favicon.png"/>
 
     <link rel="stylesheet" type="text/css" href="static/bootstrap-3.2.0.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/screen.css"/>
     <link rel="stylesheet" type="text/css" href="static/style.css"/>
+    <script type="text/javascript" src="static/modernizr-2.5.3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="static/jquery.fancybox-2.1.5.css" media="screen"/>
     <style type="text/css">
       .fancybox-skin { padding:0; background:none; }
@@ -40,21 +42,19 @@
 
   </head>
   <body class="hero">
-    <header>
-      <div class="nav_primary">
-	<a id="logo" href="/" title="UniVR"></a>
-	<nav role="navigation">
-	  <ul>
-	    <li><a href="whatsthis.htm">What's This?</a></li>
-	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact Us</a></li>
-	  </ul>
-	</nav>
-      </div>
+    <header class="nav_primary main-nav grid">
+      <a class="unit one-third center-on-mobiles" id="logo" href="/" title="UniVR"></a>
+      <nav class="unit two-thirds" role="navigation" style="display:block;">
+	<ul>
+	  <li><a href="whatsthis.htm">What's This?</a></li>
+	  <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact Us</a></li>
+	</ul>
+      </nav>
     </header>
 
     <video id="bgv" width="1280" height="640" autoplay loop muted poster="static/hero.jpg">
-      <source src="http://giant.gfycat.com/CandidImmaterialDromedary.webm" type="video/webm"/>
-      <source src="http://giant.gfycat.com/CandidImmaterialDromedary.mp4" type="video/mp4"/>
+      <!-- <source src="http://giant.gfycat.com/CandidImmaterialDromedary.webm" type="video/webm"/> -->
+      <!-- <source src="http://giant.gfycat.com/CandidImmaterialDromedary.mp4" type="video/mp4"/> -->
     </video>
     <div id="tagLine">
       <h1>UNIVERSAL VIRTUAL REALITY</h1>
