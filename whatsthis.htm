@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Logo kindly made by emiliebouchon.com -->
+<!-- Inspired from www.frida.re -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-59945250-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <meta property="og:title" content="UniVR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="static/logo.svg"/>
+    <meta property="og:description" content="UniVR ~ No headgear required"/>
+    <meta name="description" content="UniVR ~ No headgear required"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="UniVR"/>
+    <meta name="twitter:description" content="UniVR ~ No headgear required"/>
+    <meta name="twitter:image" content="static/logo.svg"/>
+    <title>UniVR ~ No headgear required</title>
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-itouch-icon" href="/favicon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="static/bootstrap-3.2.0.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" type="text/css" href="static/screen.css"/>
+    <script type="text/javascript" src="static/modernizr-2.5.3.min.js"></script>
+
+  </head>
+  <body class="hero">
+    <header class="main-nav grid">
+        <!-- <nav class="mobile-nav unit two-thirds hide-on-mobiles"> -->
+      <div class="nav_primary">
+	<a id="logo" href="/" title="UniVR" class="unit one-third center-on-mobiles"></a>
+	<nav role="navigation" class="unit two-thirds">
+	  <ul>
+	    <li class="current"><a href="whatsthis.htm">What's This?</a></li>
+	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact<span class="hide-on-mobiles"> Us</span></a></li>
+	  </ul>
+	</nav>
+      </div>
+    </header>
+
+    <div class="wrap">
+    <section class="intro">
+      <div class="grid">
+        <div class="unit whole center-on-mobiles">
+          <p class="first">Inject JavaScript to explore native apps on Windows, Mac, Linux, iOS and Android.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="grid">
+        <div class="unit one-third">
+          <h2>Scriptable</h2>
+          <p>
+            Your own scripts get injected into black box processes to execute custom debugging logic.
+            Hook any function, spy on crypto APIs or trace private application code, no source code needed!
+          </p>
+        </div>
+        <div class="unit one-third">
+          <h2>Stalking</h2>
+          <p>
+            Stealthy code tracing without relying on software or hardware breakpoints.
+            Think <a href="http://en.wikipedia.org/wiki/DTrace">DTrace</a> in user-space,
+            based on dynamic recompilation, like <a href="http://www.dynamorio.org/">DynamoRIO</a>
+            and <a href="http://software.intel.com/en-us/articles/pin-a-dynamic-binary-instrumentation-tool">PIN</a>.
+          </p>
+        </div>
+        <div class="unit one-third">
+          <h2>Portable</h2>
+          <p>
+            Works on Windows, Mac, Linux, iOS and Android. Grab a Python package from <a href="https://pypi.python.org/pypi/frida">PyPI</a> or use Frida
+            through its <a href="http://ospy.org/frida/windows/x64-Release/bin/Frida.dll">.NET binding</a>,
+            <a href="http://ospy.org/frida/mac/lib/browser/plugins/libnpfrida.dylib">browser plugin</a> or
+            <a href="http://ospy.org/frida/ios/lib/libfrida-core-1.0.a">C API</a>.
+          </p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </section>
+
+    <section class="quickstart">
+      <div class="grid">
+        <div class="unit golden-small center-on-mobiles">
+          <h4>Get up and running <em>in&nbsp;seconds</em>.</h4>
+        </div>
+        <div class="unit golden-large code">
+          <p class="title">Quick-start Instructions</p>
+          <div class="shell">
+            <p class="line">
+              <span class="path">~</span>
+              <span class="prompt">$</span>
+              <span class="command">sudo easy_install frida</span>
+            </p>
+            <p class="line">
+              <span class="path">~</span>
+              <span class="prompt">$</span>
+              <span class="command">frida-trace -i 'recv*' Skype</span>
+            </p>
+            <p class="line">
+              <span class="output">recvfrom: Auto-generated handler: …/recvfrom.js</span>
+            </p>
+            <p class="line">
+              <span class="output">Started tracing 21 functions.</span>
+            </p>
+            <p class="line">
+              <span class="output">1442 ms&nbsp;&nbsp;&nbsp;&nbsp;recvfrom()</span>
+            </p>
+            <p class="line">
+              <span class="output"># Live-edit recvfrom.js and watch the magic!</span>
+            </p>
+            <p class="line">
+              <span class="output">5374 ms&nbsp;&nbsp;&nbsp;&nbsp;recvfrom(socket=67, buffer=0x252a618, length=65536, flags=0, address=0xb0420bd8, address_len=16)</span>
+            </p>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </section>
+    </div>
+
+
+    <footer title="">
+      <div class="grid" title="">
+        <div class="unit one-third center-on-mobiles">
+          <p>By <a href="http://twitter.com/oleavr/">Ole André Vadla Ravnås</a> and <a href="http://kalleberg.org/">Karl Trygve Kalleberg</a>.</p>
+        </div>
+        <div class="unit two-thirds align-right center-on-mobiles" title="">
+          <p title="">
+            Proudly hosted by
+            <a href="https://github.com/" title="">
+              <img src="static/footer-logo.png" alt="GitHub • Social coding" title="" style=""/>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+</html>
