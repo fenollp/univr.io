@@ -223,8 +223,8 @@ nav li {
 .mobile-nav a {
   float: left;
   width: 100%;
-  background: #333;
-  color: #39B54A;
+  /* background: #333; */
+  /* color: #39B54A; */
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
@@ -234,8 +234,8 @@ nav li {
 }
 
 .mobile-nav .current a {
-  background: #39B54A;
-  color: #222;
+  /* background: #39B54A; */
+  /* color: #222; */
   box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
   text-shadow: 0 1px 0 rgba(255,255,255,.3);
 }
