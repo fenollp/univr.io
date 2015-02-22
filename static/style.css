@@ -319,14 +319,10 @@ video#bgv {
             transform: translate(-50%, -50%);
     width: 90%;
 }
-/* @media screen and (max-width: 568px) { */
-/*     #sections { */
-/*         margin-top: 20%; */
-/*     } */
-/* } */
+@media screen and (max-width: 568px) {
+    header { height:10%; }
+    #sections { margin-top:10%; }
+}
 
 .main_nav { display:block; }
 .logo_img { width:15%; height:15%; }
-
-header { height:10%; }
-#sections { margin-top:10%; }
