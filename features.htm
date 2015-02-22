@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="UniVR"/>
     <meta name="twitter:description" content="UniVR ~ No headgear required"/>
     <meta name="twitter:image" content="static/logo.svg"/>
-    <title>UniVR ~ No headgear required</title>
+    <title>UniVR ~ Features</title>
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
@@ -34,23 +34,48 @@
     <link rel="stylesheet" type="text/css" href="static/style.css"/>
     <link rel="stylesheet" type="text/css" href="static/screen.css"/>
     <script type="text/javascript" src="static/modernizr-2.5.3.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'/>
-    <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'/>
 
   </head>
   <body class="bg">
-    <header class="main-nav grid">
-        <!-- <nav class="mobile-nav unit two-thirds hide-on-mobiles"> -->
-      <div class="nav_primary">
-	<a id="logo" href="/" title="UniVR" class="unit one-third center-on-mobiles"></a>
-	<nav role="navigation" class="unit two-thirds">
+    <header>
+      <div class="hide-on-mobiles main-nav nav_primary">
+        <a href="/" title="UniVR" id="logo"></a>
+        <nav role="navigation" class="main_nav">
 	  <ul>
-	    <li class="current"><a href="whatsthis.htm">What's This?</a></li>
-	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact<span class="hide-on-mobiles"> Us</span></a></li>
+	    <li class="current"><a href="features.htm">Features</a></li>
+	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact Us</a></li>
 	  </ul>
-	</nav>
+        </nav>
+      </div>
+
+      <div class="show-on-mobiles mobile-nav grid">
+        <a href="/" title="UniVR" class="unit one-third center-on-mobiles">
+          <img src="static/logo.svg" class="logo_img"/>
+        </a>
+        <nav role="navigation" class="unit two-thirds">
+	  <ul>
+	    <li class="current"><a href="features.htm">Features</a></li>
+	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact Us</a></li>
+	  </ul>
+        </nav>
       </div>
     </header>
+
+    <div id="sections">
+      <section class="intro grid">
+        <div class="unit whole center-on-mobiles" style="font-family:sans-serif;">
+          <h1 style="color:white; line-height:3.0rem;">UNIVERSAL VIRTUAL REALITY</h1>
+          <p>
+            Explore 3D scapes <span class="hide-on-mobiles">from within,</span> <br/>
+            just using your laptop<span class="hide-on-mobiles"> or tablet</span>.
+          </p>
+          <p>
+            <br/>immerse yourself
+          </p>
+          <button id="frontButton" title="Coming soon!">Download</button>
+        </div>
+      </section>
+    </div>
 
     <div class="wrap">
     <section class="intro">
@@ -148,5 +173,9 @@
         </div>
       </div>
     </footer>
+
+
+    <script type="text/javascript" src="static/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.2.0.min.js"></script>
 
 </html>

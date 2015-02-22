@@ -252,21 +252,6 @@ h1 {
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
-#tagLine {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-        -ms-transform: translate(-50%, -50%); /* IE 9 */
-    -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
-            transform: translate(-50%, -50%); /* Standard syntax */
-    width: 80%;
-}
-
-#tagLine h1 {
-    color: white;
-    line-height: 3.0rem;
-}
-
 #frontButton {
     border: none;
     background: rgba(255, 255, 255, 0.3);
