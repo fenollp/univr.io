@@ -232,7 +232,7 @@ header {
 
 /* Hero */
 
-.hero {
+.bg {
     overflow: auto;
     width: 100%;
     height: 100%;
@@ -248,7 +248,7 @@ header {
     vertical-align: middle;
 }
 
-.hero h1 {
+h1 {
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
@@ -307,25 +307,30 @@ input:-ms-input-placeholder {
     color: white;
 }
 
-.wistia {
-    margin-top: 3rem;
+/* //demosthenes.info/blog/777/Create-Fullscreen-HTML5-Page-Background-Video */
+video { display: block; }
+video#bgv {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url(hero.jpg) no-repeat;
+    background-position: bottom center;
+    background-size: cover;
 }
 
-video {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    position: relative;
-    object-fit: cover;
-    clear: both;
-    overflow: auto;
-    display: block;
-    clear: both;
-    background: url('hero.jpg') no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    -webkit-transition: 1s opacity;
-    transition: 1s opacity;
+#sections {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 90%;
 }

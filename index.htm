@@ -38,11 +38,14 @@
     <link rel="stylesheet" type="text/css" href="static/jquery.fancybox-2.1.5.css" media="screen"/>
     <style type="text/css">
       .fancybox-skin { padding:0; background:none; }
-      .mobile-logo img { width:15%; height:15%; }
     </style>
 
+    <!--[if lt IE 9]>
+        <script> document.createElement('video'); </script>
+    <![endif]-->
   </head>
-  <body class="hero">
+  <!-- <body style="background: #35353f url(static/hero.jpg) fixed cover bottom center;"> -->
+  <body class="bg wrap">
     <header>
       <div class="hide-on-mobiles main-nav nav_primary">
         <a id="logo" href="/" title="UniVR"></a>
@@ -55,38 +58,45 @@
       </div>
 
       <div class="show-on-mobiles mobile-nav grid">
-        <a class="unit one-third center-on-mobiles mobile-logo" href="/" title="UniVR">
-          <img src="static/logo.svg"/>
+        <a class="unit one-third center-on-mobiles" href="/" title="UniVR">
+          <img src="static/logo.svg" style="width:15%; height:15%;"/>
         </a>
         <nav class="unit two-thirds" role="navigation">
 	  <ul>
-	    <li class="current"><a href="whatsthis.htm">What's This?</a></li>
+	    <li><a href="whatsthis.htm">What's This?</a></li>
 	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact Us</a></li>
 	  </ul>
         </nav>
       </div>
     </header>
 
-    <video id="bgv" width="1280" height="640" autoplay loop muted poster="static/hero.jpg">
-      <!-- <source src="http://giant.gfycat.com/CandidImmaterialDromedary.webm" type="video/webm"/> -->
-      <!-- <source src="http://giant.gfycat.com/CandidImmaterialDromedary.mp4" type="video/mp4"/> -->
+    <video class="hide-on-mobiles" id="bgv" width="1280" height="640" autoplay loop muted poster="static/hero.jpg">
+      <source src="http://giant.gfycat.com/CandidImmaterialDromedary.webm" type="video/webm"/>
+      <source src="http://giant.gfycat.com/CandidImmaterialDromedary.mp4" type="video/mp4"/>
     </video>
-    <div id="tagLine">
-      <h1>UNIVERSAL VIRTUAL REALITY</h1>
-      <h2>no gadget needed</h2>
-      <button id="frontButton" title="Coming soon!">Download</button>
-      <!--<div class="wistia">
-          <iframe src="//player.vimeo.com/video/119921554" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>-->
-      <div class="wistia">
-        <a class="fancybox-media" href="https://vimeo.com/119921554">
-          <!-- ▸ -->
-          <!-- ▶ -->
-          ▷
-          PLAY TEASER
-        </a>
-      </div>
+
+    <div id="sections">
+      <section class="intro grid">
+        <div class="unit whole center-on-mobiles">
+          <h1 style="text-transform:uppercase; color:white; line-height:3.0rem;">Universal Virtual Reality</h1>
+          <p class="first">Inject JavaScript to explore native apps on Windows, Mac, Linux, iOS</p>
+          <p id="ring">no gadget needed</p>
+          <button id="frontButton" title="Coming soon!">Download</button>
+          <!--<div class="wistia">
+              <iframe src="//player.vimeo.com/video/119921554" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>-->
+          <div style="margin-top:3rem;">
+            <a class="fancybox-media" href="https://vimeo.com/119921554">
+              <!-- ▸ -->
+              <!-- ▶ -->
+              ▷
+              PLAY TEASER
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
+
 
     <script type="text/javascript" src="static/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="static/bootstrap-3.2.0.min.js"></script>
