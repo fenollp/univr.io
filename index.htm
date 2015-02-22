@@ -44,26 +44,25 @@
         <script> document.createElement('video'); </script>
     <![endif]-->
   </head>
-  <!-- <body style="background: #35353f url(static/hero.jpg) fixed cover bottom center;"> -->
-  <body class="bg wrap">
+  <body class="bg">
     <header>
       <div class="hide-on-mobiles main-nav nav_primary">
-        <a id="logo" href="/" title="UniVR"></a>
-        <nav role="navigation" style="display:block;">
+        <a href="/" title="UniVR" id="logo"></a>
+        <nav role="navigation" class="main_nav">
 	  <ul>
-	    <li><a href="whatsthis.htm">What's This?</a></li>
+	    <li><a href="features.htm">Features</a></li>
 	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact Us</a></li>
 	  </ul>
         </nav>
       </div>
 
       <div class="show-on-mobiles mobile-nav grid">
-        <a class="unit one-third center-on-mobiles" href="/" title="UniVR">
-          <img src="static/logo.svg" style="width:15%; height:15%;"/>
+        <a href="/" title="UniVR" class="unit one-third center-on-mobiles">
+          <img src="static/logo.svg" class="logo_img"/>
         </a>
-        <nav class="unit two-thirds" role="navigation">
+        <nav role="navigation" class="unit two-thirds">
 	  <ul>
-	    <li><a href="whatsthis.htm">What's This?</a></li>
+	    <li><a href="features.htm">Features</a></li>
 	    <li><a href="mailto:pierrefenoll@gmail.com?Subject=UniVR" target="_top">Contact Us</a></li>
 	  </ul>
         </nav>
@@ -77,13 +76,13 @@
 
     <div id="sections">
       <section class="intro grid">
-        <div class="unit whole center-on-mobiles">
+        <div class="unit whole center-on-mobiles" style="font-family:sans-serif;">
           <h1 style="color:white; line-height:3.0rem;">UNIVERSAL VIRTUAL REALITY</h1>
-          <p style="font-family:sans-serif;">
+          <p>
             Explore 3D scapes <span class="hide-on-mobiles">from within,</span> <br/>
             just using your laptop<span class="hide-on-mobiles"> or tablet</span>.
           </p>
-          <p style="font-family:sans-serif;">
+          <p>
             <br/>immerse yourself
           </p>
           <button id="frontButton" title="Coming soon!">Download</button>
@@ -107,22 +106,10 @@
     <script type="text/javascript">
     $(document).ready(function (){
       var bgv = $('#bgv')[0];
-      var maybeSwitchBG = function () {
-          var thres_w = 740;
-          ($(window).width() < thres_w) ? $(bgv).hide()
-                                        : $(bgv).show();
-      }
-      maybeSwitchBG();
-      $(window).resize(maybeSwitchBG);
-
-      var toggleBGPlay = function () {
-          bgv.paused ? bgv.play() : bgv.pause();
-          //bgv.paused ? $(bgv).hide() : $(bgv).show();
-          maybeSwitchBG();
-      };
       $(document).keydown(function (evt) {
           if (evt.keyCode == 32)
-              toggleBGPlay();
+              bgv.paused ? bgv.play() : bgv.pause();
+              //bgv.paused ? $(bgv).hide() : $(bgv).show();
       });
 
       $('.fancybox-media')
