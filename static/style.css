@@ -224,11 +224,11 @@ header {
     background-image: url('logo.svg');
 }
 
-@media all and (max-width: 46.24em) {
-    .nav_primary {
-	display: none;
-    }
-}
+/* @media all and (max-width: 46.24em) { */
+/*     .nav_primary { */
+/* 	display: none; */
+/*     } */
+/* } */
 
 /* Hero */
 
