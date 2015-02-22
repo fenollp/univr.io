@@ -306,6 +306,9 @@ body > footer a:hover img {
 
 /* Intro */
 
+.intro { font-family:sans-serif; }
+.intro h1 { color:white; line-height:3.0rem; }
+
 .intro .unit {
   padding: 10px 0 40px;
 }
