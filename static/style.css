@@ -324,5 +324,22 @@ video#bgv {
     #sections { margin-top:10%; }
 }
 
-.main_nav { display:block; }
+.main_nav {
+    display: block;
+}
+.main_nav a {
+    text-decoration: none;
+}
 .logo_img { width:15%; height:15%; }
+
+a {
+    /* color: #39B54A; */
+    text-decoration: underline;
+    /* transition: all .25s; */
+    /* -moz-transition: all .25s; */
+    /* -webkit-transition: all .25s; */
+}
+
+a:hover {
+  /* color: #009245; */
+}

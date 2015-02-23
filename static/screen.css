@@ -727,17 +727,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-a {
-  color: #39B54A;
-  text-decoration: none;
-  transition: all .25s;
-   -moz-transition: all .25s;
-   -webkit-transition: all .25s;
-}
+/* a { */
+/*   color: #39B54A; */
+/*   text-decoration: none; */
+/*   transition: all .25s; */
+/*    -moz-transition: all .25s; */
+/*    -webkit-transition: all .25s; */
+/* } */
 
-a:hover {
-  color: #009245;
-}
+/* a:hover { */
+/*   color: #009245; */
+/* } */
 
 strong {
   font-weight: 700;
